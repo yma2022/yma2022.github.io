@@ -5,6 +5,7 @@ description: unsupervised learning and reinforcement learning
 img: assets/img/projects_img/ml/kmeans_digits_reduced.png
 importance: 1
 category: work
+giscus_comments: true
 ---
 
 ## Unsupervised Learning
@@ -30,10 +31,10 @@ Dimensionality reduction is the method to find more important features and exclu
 Another method dominates unsupervised learning is clustering, which is to find hidden pattern in a given dataset. Two popular clustering methods are k-Means and expectation maximization (EM). In this project, I show clustering with original dataset and dimensionality reduced dataset.
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/projects_img/ml/kmeans_digits_reduced.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/projects_img/ml/kmeans_digits_reduced.png" title="kmeans image" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/projects_img/ml/em_digits_reduced.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/projects_img/ml/em_digits_reduced.png" title="em image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">

@@ -1,81 +1,80 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image and giscus comments
+title: AI for Robotics Project
+description: project combination for localization, searching and navigation
 img: assets/img/3.jpg
 importance: 2
 category: work
 giscus_comments: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+The project combination includes the demonstration of kalman filter, particle filter, searching algorithm, PID control and SLAM algorithm.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+## Kalman Filter
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+In this project, Earth is threatened by a shower of meteorites falling in your location. It is your task to receive
+sensor readings of the locations of these meteorites, predict where each of the meteorites will be one tenth of a
+second later using Kalman Filters (KFs), and finally, destroy each meteorite before it hits the ground by firing
+your laser turret at it.
+This project consists of two parts:
+- Estimation of the positions of many meteorites given noisy measurements
+- Defense: Aim and fire your laser turret at incoming meteorites before they hit the ground
+
+
+We know the structure of the motion model that governs the motion of the meteorites, but each meteorite
+has different coefficients in its equation of motion, which means we can’t just apply the motion model to
+predict a particular meteorite’s next location. Kalman Filters allow us to combine our knowledge of the motion
+model’s structure and our estimate of our uncertainty of each element in the state of a particular meteorite
+with observations of the meteorite’s positions over time to predict where the meteorite will be at a future time.
+Since each meteorite has its own motion model coefficients and therefore moves slightly differently than all the
+other meteorites, we need one Kalman filter for each meteorite. We’ll want to create and update separate x̄s
+and P s for each meteorite, using the Kalman filter equations. The state transition matrix (aka motion model
+matrix, F ), measurement model matrix (H), and observation uncertainty matrix (R) are constant and the
+same for all meteorites.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/projects_img/robotics/meteorites_localization.gif" title="localization image" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/projects_img/robotics/meteorites_defense.gif" title="defense image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
+    Estimation of meteorites locations and defense earth.
 </div>
+
+
+## Particle Filter
+
+The goal of this project is to give you practice implementing a particle filter used to localize a
+man-made 10.2-meter satellite in a solar system. After completing an intergalactic mission,
+it’s time for you to return home. Your satellite is warped through a wormhole and released
+into your home solar system in approximate circular orbit around the sun. The satellite
+receives measurements of the magnitude of the collective gravitational pull of the planets in
+the solar system.
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/projects_img/robotics/sat local 1.gif" title="satellite local 1 image" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/projects_img/robotics/sat local 2.gif" title="satellite local 2 image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    This image can also have a caption. It's like magic.
+    Localization of satellite in a solar system.
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal its glory in the next row of images.
 
-
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/projects_img/robotics/sat commu 1.gif" title="satellite commu 1 image" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/projects_img/robotics/sat commu 2.gif" title="satellite commu 2 image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
+    Localization of satellite in a solar system and communicate with another planet.
 </div>
-
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-```
-{% endraw %}
