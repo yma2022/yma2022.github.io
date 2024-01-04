@@ -2,7 +2,7 @@
 layout: page
 title: AI for Robotics Project
 description: project combination for localization, searching and navigation
-img: assets/img/3.jpg
+img: assets/img/projects_img/robotics/robotics.jpg
 importance: 2
 category: work
 giscus_comments: true
@@ -77,4 +77,54 @@ the solar system.
 </div>
 <div class="caption">
     Localization of satellite in a solar system and communicate with another planet.
+</div>
+
+
+## PID Control
+
+Autonomous drones are used to maintain critical infrastructure, e.g., inspect gas pipelines for leaks. In
+this project you will implement a PID controller for an autonomous drone to fly to a target elevation and
+horizontal position and hover at some target location for a specified time.
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/projects_img/robotics/pid_control.gif" title="pid control image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    PID control of drone.
+</div>
+
+## Searching Algorithms
+In this project, we will implement search algorithms to navigate a robot through a warehouse to pick up and deliver boxes to a designated drop zone area.
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/projects_img/robotics/astar.gif" title="a star image" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/projects_img/robotics/dp.gif" title="dp image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    A* and dynamic programming algorithms for deterministic process.
+</div>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/projects_img/robotics/stochastic.gif" title="stochastic image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Optimal policy finding for stochastic process.
+</div>
+
+## SLAM
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/projects_img/robotics/slam.gif" title="slam image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    SLAM algorithm navigate the drone to treasure.
 </div>
