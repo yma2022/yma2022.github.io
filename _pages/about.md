@@ -5,8 +5,8 @@ permalink: /
 
 profile:
   align: right
-  image: panda.jpg
-  image_circular: false # crops the image to make it circular
+  #image: panda.jpg
+  #image_circular: true # crops the image to make it circular
   more_info: >
 
 
