@@ -56,27 +56,14 @@ the solar system.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/projects_img/robotics/sat local 1.gif" title="satellite local 1 image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/projects_img/robotics/sat local 2.gif" title="satellite local 2 image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Localization of satellite in a solar system.
-</div>
-
-
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/projects_img/robotics/sat commu 1.gif" title="satellite commu 1 image" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/projects_img/robotics/sat commu 2.gif" title="satellite commu 2 image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Localization of satellite in a solar system and communicate with another planet.
+    (Left) Localization of satellite in a solar system; (Right) Localization of satellite in a solar system and communicate with another planet.
 </div>
 
 
@@ -95,7 +82,7 @@ horizontal position and hover at some target location for a specified time.
 </div>
 
 ## Searching Algorithms
-In this project, we will implement search algorithms to navigate a robot through a warehouse to pick up and deliver boxes to a designated drop zone area.
+In this project, we will implement search algorithms to navigate a robot through a warehouse to pick up and deliver boxes to a designated drop zone area with minimal costs.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -119,7 +106,7 @@ In this project, we will implement search algorithms to navigate a robot through
 </div>
 
 ## SLAM
-
+GraphSLAM operates on a straightforward principle: it deduces a collection of soft constraints from the data, forming a sparse graph. The map and robot path are then determined by resolving these constraints to achieve a globally consistent estimate. In our undertaking, online GraphSLAM is employed to guide the Indiana drones through the forest, searching for treasure while preventing collisions with trees.
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/projects_img/robotics/slam.gif" title="slam image" class="img-fluid rounded z-depth-1" %}
